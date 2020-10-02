@@ -1,9 +1,9 @@
 import React from "react";
-//Home Page Content
-export class Home extends React.Component {
+//Calendar Page Content
+export class TV_Shows extends React.Component {
     render() {
         return (<div className="main-body w3-container">
-            <h1>Home</h1>
+            <h1>TV Shows</h1>
         </div>);
     }
 }

@@ -1,5 +1,12 @@
 import React from 'react';
 import { getCategories, postNewRecord } from '../controller/api'
+import amazon_icon from './img/amazon_icon.png';
+import disney_icon from './img/disney_icon.png';
+import hbo_icon from './img/hbo_icon.png';
+import hulu_icon from './img/hulu_icon.png';
+import netflix_icon from './img/netflix_icon.png';
+import plex_icon from './img/plex_icon.png';
+import youtube_icon from './img/youtube_icon.png';
 export class Manage extends React.Component {
     constructor(props) {
         super(props)
@@ -46,51 +53,51 @@ export class Manage extends React.Component {
     render() {
         return (
             <div className="main-body w3-container">
-                <h1>Manage</h1>
+                <h1>Manage Accounts</h1>
                 <div className="add-items">
                     <form id="items">
                         <ul className="no-bullet w3-center">
                             <li>
-                                <label form="type">Type: </label>
-                                <select value={this.state.type} onChange={this.handleFormChange} id="type" name="type_name">
-                                    {this.state.categories.map(category => {
-                                        return (<option value={category.key} key={category.key}>{category.name}</option>)
-                                    })}
-                                </select>
+                                <label form="type">Plex</label>
+                                <img src={plex_icon} alt="" />
+                                <button type="submit" onClick={this.submit}>Connect</button>
+                                <button type="submit" onClick={this.submit}>Logout</button>
                             </li>
                             <li>
-                                <label form="type">Manufacturer: </label>
-                                <input value={this.state.manufacturer} onChange={this.handleFormChange} type="text" id="manufacturer" name="man_name"></input>
+                                <label form="type">Netflix</label>
+                                <img src={netflix_icon} alt="" />
+                                <button type="submit" onClick={this.submit}>Connect</button>
+                                <button type="submit" onClick={this.submit}>Logout</button>
                             </li>
                             <li>
-                                <label form="type">Model: </label>
-                                <input value={this.state.model} onChange={this.handleFormChange} type="text" id="model" name="model"></input>
+                                <label form="type">Hulu</label>
+                                <img src={hulu_icon} alt="" />
+                                <button type="submit" onClick={this.submit}>Connect</button>
+                                <button type="submit" onClick={this.submit}>Logout</button>
                             </li>
                             <li>
-                                <label form="type">Serial Number: </label>
-                                <input value={this.state.serial} onChange={this.handleFormChange} type="text" id="serial" name="serial"></input>
+                                <label form="type">Disney+</label>
+                                <img src={disney_icon} alt="" />
+                                <button type="submit" onClick={this.submit}>Connect</button>
+                                <button type="submit" onClick={this.submit}>Logout</button>
                             </li>
                             <li>
-                                <label form="type">Owner: </label>
-                                <input value={this.state.owner} onChange={this.handleFormChange} type="text" id="owner" name="owner"></input>
+                                <label form="type">Amazon Video</label>
+                                <img src={amazon_icon} alt="" />
+                                <button type="submit" onClick={this.submit}>Connect</button>
+                                <button type="submit" onClick={this.submit}>Logout</button>
                             </li>
                             <li>
-                                <label form="type">Location: </label>
-                                <input value={this.state.location} onChange={this.handleFormChange} type="text" id="location" name="location"></input>
+                                <label form="type">HBO Go</label>
+                                <img src={hbo_icon} alt="" />
+                                <button type="submit" onClick={this.submit}>Connect</button>
+                                <button type="submit" onClick={this.submit}>Logout</button>
                             </li>
                             <li>
-                                <label form="type">Description: </label>
-                                <input value={this.state.description} onChange={this.handleFormChange} type="text" id="description" name="description"></input>
-                            </li>
-                            <li>
-                                <label>Checked Out?
-                  <input id="checked_out" onChange={this.handleFormChange} type="checkbox" name="checked_out" checked={this.state.checked_out} />
-                                </label>
-                            </li>
-                            <li className="w3-center">
-                                <button type="submit" onClick={this.submit}>
-                                    Add
-              </button>
+                                <label form="type">YouTube TV</label>
+                                <img src={youtube_icon} alt="" />
+                                <button type="submit" onClick={this.submit}>Connect</button>
+                                <button type="submit" onClick={this.submit}>Logout</button>
                             </li>
                         </ul>
                     </form>
